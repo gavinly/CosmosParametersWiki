@@ -8,9 +8,9 @@ The `mint` module is responsible for enabling the Cosmos Hub to have a flexible 
 3. [`InflationMax`](#3-InflationMax) - 0.200000000000000000 (proportion)
 4. [`InflationMin`](#4-InflationMin) - 0.070000000000000000 (proportion)
 5. [`GoalBonded`](#5-GoalBonded) - 0.670000000000000000 (proportion)
-6. [`BlocksPerYear`](#6-BlocksPerYear) - 4855015 (blocks)
+6. [`BlocksPerYear`](#6-BlocksPerYear) - 4360000 (blocks)
 
-The launch values for each parameter are outlined above, but you can [verify them yourself](#verify-parameter-values).
+The launch values for each parameter are outlined above, but you can [verify them yourself](#verify-parameter-values). Note that the `BlocksPerYear` parameter was changed from `4855015` to `4360000` as the result of Cosmos Hub Proposal #30.
 
 If you're technically-inclined, [these are the technical specifications](#technical-specifications). If you're looking to create a proposal to change one or more of these parameters, [check out this section for formatting](https://github.com/gavinly/CosmosParametersWiki/blob/master/submitting.md#formatting-the-json-file-for-the-governance-proposal).
 
@@ -106,9 +106,11 @@ Increasing the value of the `GoalBonded` parameter will cause the Cosmos Hub's i
 
 ## 6. `BlocksPerYear`
 ### The system's assumed number of blocks that the Cosmos Hub will produce in one year.
-#### `cosmoshub-3` default: `4855015`
+#### `cosmoshub-3` ~~default: `4855015`~~ **modified to:** 4360000
 
-`BlocksPerYear` is the setting for the system's assumed number of blocks that the Cosmos Hub will produce in one year. `BlocksPerYear` is currently `4855015` and the network's inflationary behaviour will be aligned with its settings when the average block time is 6.50 seconds over one year. `BlocksPerYear` is most notably used in by the system to determine the rate that new ATOMs are minted, which can vary if block times vary from 6.50 seconds per block, since effectively a different number of blocks will be produced in one year and ATOMs are minted each block.
+`BlocksPerYear` is the setting for the system's assumed number of blocks that the Cosmos Hub will produce in one year. `BlocksPerYear` was initially set at  `4855015` and the network's inflationary behaviour was aligned with its settings when the average block time is 6.50 seconds over one year. `BlocksPerYear` is most notably used in by the system to determine the rate that new ATOMs are minted, which can vary if block times vary from 6.50 seconds per block, since effectively a different number of blocks will be produced in one year and ATOMs are minted each block.
+
+However, as Cosmos Hub block times slowed down to an average of 7.24s per block, Cosmos Hub Proposal #30 was proposed and passed on 2020-11-17 effectively modifying the `BlocksPerYear` parameter to 4360000 to bring the effective inflation rate to 7%.
 
 ### Potential implications
 #### Changing the `BlocksPerYear` parameter
