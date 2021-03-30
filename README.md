@@ -1,4 +1,6 @@
-# Cosmos Hub Parameter-Change Best Practices & Wiki
+# Note: the Cosmos Hub and Cosmos SDK has been upgraded, making parts of this information no longer relevant. Please see the more actively maintained governance repo here: https://github.com/cosmos/governance
+
+# Cosmos Hub 3 - Parameter-Change Best Practices & Wiki
 This Cosmos Hub educational documentation aims to outline the [Hub's parameters](#modules-wiki), describe their functions, and describe the potential implications of modifying each parameter. This documentation also aims to provide [guidelines for creating and assessing parameter-change proposals](#best-practices).
 
 **This documentation has not had adequate review from experts or testing from participants, so please be cautious when using it.** [Discuss its development here](https://forum.cosmos.network/t/gwg-cosmos-hub-parameters-wiki/3170) and please provide feedback either in the forum or by opening a Github issue. If you are technically inclined, this is the full [list of modules](https://github.com/cosmos/cosmos-sdk/tree/master/x) in the Cosmos SDK.
