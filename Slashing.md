@@ -96,7 +96,7 @@ Increasing the value of the `DowntimeJailDuration` parameter will require a vali
 
 
 ## 4. `SlashFractionDoubleSign`
-### Proportion of stake-backing that is bruned for equivocation (aka double-signing).
+### Proportion of stake-backing that is burned for equivocation (aka double-signing).
 #### `cosmoshub-3` default: `0.050000000000000000`
 
 A validator proven to have signed two blocks at the same height is considered to have committed equivocation, and the system will then permanently burn ("slash") that validator's total delegations (aka stake-backing) by `0.050000000000000000` (5%). All delegators to an offending validator will lose 5% of all ATOMs delegated to this validator. At this point the validator will be "[tombstoned](https://docs.cosmos.network/master/modules/slashing/01_concepts.html)," which means the validator will be permanently removed from the active set of validators, and the validator's stake-backing will only be slashed one time (regardless of how many equivocations).
